@@ -48,7 +48,7 @@
   	   	 
 	* 공격 시나리오 (CVE-2019-8942/8943)
 	
-![alt text](/Users/hayeong/Desktop/GBC/Security/cve1.png)
+![cve1](/Users/hayeong/Desktop/GBC/Security/cve1.png)
  
   	1) 공격자는 공격대상이 취약한 버전의 WordPress를 사용하는지 확인함 
 	2) 공격자는 악의적인 코드가 포함된 이미지를 해당 취약점을 이용하여 공격대상이 사용 중인 테마 폴더에 업로드함
@@ -58,7 +58,7 @@
   
   * 공격 시나리오 (CVE-2019-9787)
   
-![alt text](/Users/hayeong/Desktop/GBC/Security/cve2.png)
+![cve2](/Users/hayeong/Desktop/GBC/Security/cve2.png)
  
   	1) 공격자는 공격대상이 취약한 버전의 WordPress를 사용하는지 확인함
   	2) 공격자는 WordPress 관리자에게 악의적인 코드가 포함된 댓글을 작성하도록 하는 피싱 사이트에 접근하도록 유도함
@@ -126,6 +126,7 @@
 
 	> 4. 고객 정보 암호화 미실시이다. 해킹 사고 발생 시 정보 유출을 최소화할 수 있도록 고객 정보 중 고객의 비밀번호 암호화가 수행되었어야 하나 실제로는 그렇지 않았다. 업무 관리자의 화면 조회 시 고객의 주민등록번호 뒷자리 숨김 표시 등이 실시되지 않았고, 고객의 비밀번호 암호화의 경우 주 고객 DB 서버 내에 보관 중인 고객 비밀번호는 암호화하고 있었으나, 고객 정보 조회 · 생성 · 변경 사실 등이 기록되는 로그파일에 남아 있는 고객 비밀번호는 암호화되지 않았다.
 	 
+     
 2. 악성 코드
 
 	<https://asec.ahnlab.com/949>
