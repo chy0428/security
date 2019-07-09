@@ -48,7 +48,7 @@
   	   	 
 	* 공격 시나리오 (CVE-2019-8942/8943)
 	
-![cve1](/Users/hayeong/Desktop/GBC/Security/cve1.png)
+![cve1](https://user-images.githubusercontent.com/47182864/60860238-ab81ba80-a250-11e9-8757-11aeaca56c59.png)
  
   	1) 공격자는 공격대상이 취약한 버전의 WordPress를 사용하는지 확인함 
 	2) 공격자는 악의적인 코드가 포함된 이미지를 해당 취약점을 이용하여 공격대상이 사용 중인 테마 폴더에 업로드함
@@ -58,8 +58,8 @@
   
   * 공격 시나리오 (CVE-2019-9787)
   
-![cve2](/Users/hayeong/Desktop/GBC/Security/cve2.png)
- 
+![cve2](https://user-images.githubusercontent.com/47182864/60860242-ade41480-a250-11e9-8448-dc07dc812b62.png)
+
   	1) 공격자는 공격대상이 취약한 버전의 WordPress를 사용하는지 확인함
   	2) 공격자는 WordPress 관리자에게 악의적인 코드가 포함된 댓글을 작성하도록 하는 피싱 사이트에 접근하도록 유도함
   	3) 관리자는 WordPress 관리자로 로그인한 상태로 피싱 사이트에 접근함
