@@ -44,8 +44,8 @@
   	 
  [+] CSRF(Cross Site Request Forgery) : 웹 어플리케이션 취약점 중 하나로 인터넷 사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위(수정, 삭제, 등록)를 특정 웹사이트에 요청하게 만드는 공격   
 
-  	   	 
-	* 공격 시나리오 (CVE-2019-8942/8943)
+ 
+  * 공격 시나리오 (CVE-2019-8942/8943)
 	
 ![cve1](https://user-images.githubusercontent.com/47182864/60860238-ab81ba80-a250-11e9-8757-11aeaca56c59.png)
  
@@ -126,7 +126,7 @@
 	 
 2 . 악성 코드
  > DDos공격에 사용된 악성코드 상세 분석  
-     <https://asec.ahnlab.com/949>
+        <https://asec.ahnlab.com/949>
  
  
  ---
