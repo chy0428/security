@@ -176,11 +176,38 @@ int main(){
 
 ![hw4-5](https://user-images.githubusercontent.com/47182864/61002754-396abc00-a39d-11e9-8dcf-ea02f15d5d86.png)
 
-> __[Result]__
+> __[Result]__ pw : `338724`
 
 ![hw4-3](https://user-images.githubusercontent.com/47182864/61002414-75515180-a39c-11e9-9a60-07a79af4242a.png)
 
 #### 5. crackme0x03
+
+> main을 break point를 걸어서 살펴봤는데 cmp가 없이 종료되었다.  
+> call test를 하는데 이게 따로 test라는 함수가 있어서 main에서 확인이 안되는 것 같다.
+
+![h5](https://user-images.githubusercontent.com/47182864/61037378-e711b580-a405-11e9-9093-96bdb6fa5c91.png)
+
+> test를 break point하여 살펴본다.
+
+![h5-1](https://user-images.githubusercontent.com/47182864/61037374-e6791f00-a405-11e9-9f96-97c156b0f932.png)
+
+> 이렇게 cmp를 찾을 수 있다!!@!
+
+![h5-2](https://user-images.githubusercontent.com/47182864/61037375-e6791f00-a405-11e9-8d45-311ac41a5a88.png)
+
+> 02번과 똑같은 방식으로 암호를 찾아준다.
+> 10진수로 한 번에 보여주는 `x/u` 옵션을 사용한다.
+
+![h5-3](https://user-images.githubusercontent.com/47182864/61037376-e6791f00-a405-11e9-8131-795e7dfc52ef.png)
+
+> __[Result]__  pw : `338724`
+
+![h5-4](https://user-images.githubusercontent.com/47182864/61037377-e711b580-a405-11e9-905d-45e8ab22eb6a.png)
+
+
+#### 5. crackme0x04
+
+crackme0x02랑 3이랑 암호가 똑같길래 4에도 넣어봤는데 실패 . . 
 
 ---
 ### 3. Plus
@@ -224,4 +251,4 @@ int main(){
 ---
 알아서 하라고 던져주는게 아니라 이해할 수 있도록 설명해주는게 진짜 좋다 ㅜㅜ  
 소통까지 하시는 그는 빛찬솔 . . .   
-리버싱툴 너무 깐지난다. . 이래서 컴공이 최고
+리버싱툴 너무 깐지난다. . 이래서 컴공이 최고당 (ᵔᗜᵔ*)
