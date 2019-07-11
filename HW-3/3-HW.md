@@ -40,13 +40,30 @@ int add(int x, int y){
 
 ![hw1](https://user-images.githubusercontent.com/47182864/61030790-238ae480-a3f9-11e9-8f07-b34bab8359a4.png)
 
+
 ??? 함수 호출 시, 스택의 이용을 보고 싶어서 해봤는데 지역변수 저장하는 것밖에 볼 수 없었다. 너무 간단한 함수라 그런가 호홓호ㅎ?ㅜㅜ
 
 > `ret`: CPU가 함수를 호출해서 프로그램의 흐름을 바꿀 때 `call`을 사용하고, 원래 있던 곳으로 되돌아 갈 때 `ret` 명령어를 사용한다. call 명령어가 스택에 저장해놓은 return 주소값을 Pop해서 rip레지스터에 저장해준다고 어제 찬솔님이 설명하셨다.
 
 ![hw1-2](https://user-images.githubusercontent.com/47182864/61031122-d4917f00-a3f9-11e9-9f35-121dcf0798d3.png)
 
+* 찾다보다 보니 이거 c배울때 배웠던 것 같다ㅎㅎㅎ. 다시 보자!
 
+> 스택 프레임 : 함수 호출시 할당되는 메모리 블록
+> 함수 호출이 완료되면, 기존에 선언된 지역변수에 접근이 불가능하다. (할당된 메모리 반환되므로)
+> 아래 그림에서, fct2() 함수가 호출되면서 함수 내부에 선언된 변수 e, h가 스택에 할당 -> 이 메모리 블록이 fct2()의 스택 프레임이라 한다.
+
+![hw5](https://user-images.githubusercontent.com/47182864/61034071-88493d80-a3ff-11e9-9fe1-295ec58af534.png)
+
+> sp register : 스택 프레임을 가리키는 레지스터 (32bit : esp , 64bit : rsp)
+> sp는 변수가 할당될 때마다 증가하면서, 다음 변수가 할당될 메모리 위치를 가리킨다.
+
+
+![hw5-1](https://user-images.githubusercontent.com/47182864/61034067-87b0a700-a3ff-11e9-8bf2-809101316307.png)
+
+* breakpoint를 add()함수로 걸고 다시 어셈블리 코드를 살펴보면 스택 현황을 볼 수 있었다!!!
+
+ ![add](https://user-images.githubusercontent.com/47182864/61036160-7ff30180-a403-11e9-975c-163ea1088c86.png)
 
 #### 3. write-up (2)
 * malloc으로 할당한 메모리는 정말 힙 영역으로 구분되어 있을까 ?! 이것도 어셈블리 코드로 확인해보기로 했다!  
@@ -163,7 +180,7 @@ int main(){
 
 ![hw4-3](https://user-images.githubusercontent.com/47182864/61002414-75515180-a39c-11e9-9a60-07a79af4242a.png)
 
-
+#### 5. crackme0x03
 
 ---
 ### 3. Plus
@@ -173,7 +190,6 @@ int main(){
 	* 사용법 :  <https://linux.die.net/man/1/xxd>
 
 * dword, word, byte
-	- 많이 나오길래 찾아봄
 	- dword : 4byte(eax)
 		- dword ptr (명령) : 지금 이 (명령)은 operand의 용량 중 dword만큼의 공간을 이용함
 	- word : 2byte(ax)
@@ -200,6 +216,9 @@ int main(){
 	 - `ebp` : 스택 프레임의 시작 지점 주소 (스택의 가장 윗 부분)가 저장됨
 	 			 현재 사용되는 스택 프레임이 소멸되지 않는 이상 값이 변하지 않음
 
+* 함수가 호출되는 과정을 스택 프레임로 설명하고 있는 자료
+	<https://www.hackerschool.org/HS_Boards/data/Free_Lectures/chapter_13.pdf>
+	
 ---
 ### 4. Etc
 ---
