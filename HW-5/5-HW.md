@@ -8,8 +8,8 @@
  
 > radare2로 열어서 yellow함수의 어셈블리 코드를 확인한다!  
 > `movzx eax, byte [obj.buffer]`하여 eax에 해당 버퍼 값을 넣어주고 있다.  
-> `cmp al, 0x3A`을 연속하여, al과 A의 값을 비교한다.  
->  byte 즉, buffer의 크기를 +1 해가며, al의 담긴 값과 0x38, 0x34, 0x33, 0x37, 0x31, 0x30, 0x36, 0x35와 비교한다. (이는 각각 84371065와 대응된다.)  
+> `cmp al, 0x3X`을 연속해서 수행한다.   
+>  byte 즉, buffer의 크기를 +1 해가며, [0x804c2XX]의 값과 0x38, 0x34, 0x33, 0x37, 0x31, 0x30, 0x36, 0x35와 비교한다. (각각의 byte의 대응되는 아스키 코드는 8,4,3,7,1,0,6,5이다.)  
 >  중간에 값이 다르면 `jne`에 의해 `0x804977c`로 뛰게 되고, 전부 같으면 `0x804978b`로 뛰어 `obj.wire_yellow`를 0으로 바꾸고 yellow함수를 종료한다.
 > > `movzx` : 부호없는 산술 값에 사용되며, byte나 word를 dword 목적지에 전송한다. 0bit로 목적지 피연산자의 왼쪽 bit들을 채운다. (기존의 mov는 byte -> word(X)였지만, movzx는 가능하다). 
 
@@ -38,7 +38,24 @@
 
 #### 3. Blue
 
+> Ebp-4는 0x804c160임  
+> Ebp-8 : 변수1, eax+4의 값을 저장하고 있음  
+> Ebp-0xc 는 0. 
 
+![blue1](https://user-images.githubusercontent.com/47182864/61187707-c53b5b80-a6af-11e9-992d-f06045478957.png)
+
+> 변수 graph가 뭘 가리키나 봄
+
+![blue2](https://user-images.githubusercontent.com/47182864/61187708-c5d3f200-a6af-11e9-87a0-81279aa92599.png)
+
+> 계속 해봄 뭔가 반복됨
+
+![blue3](https://user-images.githubusercontent.com/47182864/61187709-c5d3f200-a6af-11e9-91db-c98d68a4c42a.png)
+![blue4](https://user-images.githubusercontent.com/47182864/61187710-c5d3f200-a6af-11e9-887a-1ce6dbdfc103.png)
+![blue5-2](https://user-images.githubusercontent.com/47182864/61187711-c5d3f200-a6af-11e9-99c0-f3a6944ea5a5.png)
+![blue6](https://user-images.githubusercontent.com/47182864/61187712-c66c8880-a6af-11e9-8b61-a69f585ebed1.png)
+
+뭘까 . . .R L \n . . .. ..ㅇㅡ아ㅏ아악
 
 
 ---
