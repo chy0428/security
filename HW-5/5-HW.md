@@ -52,13 +52,17 @@
 
 ![blue3](https://user-images.githubusercontent.com/47182864/61187709-c5d3f200-a6af-11e9-91db-c98d68a4c42a.png)
 
-> 입력이 'L', 'R' , '\n'인지 검사하기 때문에 input은 string이어야 하며, 유효한 문자는 L, R , \n이다. `0x08049a84`를 보면 input 문자열이 15byte보다 작거나 같아야 됨을 알 수 있다.
+> 입력이 'L', 'R', '\n'인지 검사하기 때문에 input은 string이어야 하며, 유효한 문자는 L, R , \n이다. `0x08049a84`를 보면 input 문자열이 15byte보다 작거나 같아야 됨을 알 수 있다.
 
 ![blue4](https://user-images.githubusercontent.com/47182864/61187710-c5d3f200-a6af-11e9-887a-1ce6dbdfc103.png)
 ![blue5-2](https://user-images.githubusercontent.com/47182864/61187711-c5d3f200-a6af-11e9-99c0-f3a6944ea5a5.png)
 ![blue6](https://user-images.githubusercontent.com/47182864/61187712-c66c8880-a6af-11e9-8b61-a69f585ebed1.png)
 
-뭘까 . . .R L \n . . .. ..ㅇㅡ아ㅏ아악
+> L을 입력할 시 ->  val_4h가 0x0804c160(--> 0x0804c19c). val_4h의 값이 된다.  
+> R을 입력할 시 ->  val_4h에서 값을 가져와서 동일한 주소에 +8byte, val_4h에 다시 값을 넣는다.  
+> val_4h에 저장된 주소에 +4byte하고, 해당 값을 val 8h에 저장된 값과 XOR 한 다음 결과를 다시 val_8h에 넣는다?
+> 마지막에 val_8h랑 obj.solution이랑 일치하면 답이 될 것이다 ?
+뭘까 . . 
 
 
 ---
