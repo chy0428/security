@@ -51,6 +51,9 @@
 > 계속 해봄 뭔가 반복됨
 
 ![blue3](https://user-images.githubusercontent.com/47182864/61187709-c5d3f200-a6af-11e9-91db-c98d68a4c42a.png)
+
+> 입력이 'L', 'R' , '\n'인지 검사하기 때문에 input은 string이어야 하며, 유효한 문자는 L, R , \n이다. `0x08049a84`를 보면 input 문자열이 15byte보다 작거나 같아야 됨을 알 수 있다.
+
 ![blue4](https://user-images.githubusercontent.com/47182864/61187710-c5d3f200-a6af-11e9-887a-1ce6dbdfc103.png)
 ![blue5-2](https://user-images.githubusercontent.com/47182864/61187711-c5d3f200-a6af-11e9-99c0-f3a6944ea5a5.png)
 ![blue6](https://user-images.githubusercontent.com/47182864/61187712-c66c8880-a6af-11e9-8b61-a69f585ebed1.png)
@@ -59,16 +62,17 @@
 
 
 ---
-### 2. Etc
----
-이렇게 배울 수 있는 건 정말 감사한 일입니당 
-
----
-### 3. plus
+### +) plus
 ---
 * `jmp`와 `call`의 차이점
-	* jmp는 특정 지역으로 이동, call은 인자 하나를 받아서, 해당 주소의 함수 또는 loop와 같은 문을 부른다. 
+	* `jmp`는 특정 지역으로 이동, `call`은 인자 하나를 받아서, 해당 주소의 함수 또는 loop와 같은 문을 부른다. 
 	* '부른다' : 주소까지 갈 필요가 없으며, 해당 위치에서 수행하며, 돌아올 주소인 ret을 스텍에 저장한다는 점이 jmp와 다르다.
 
 * 어셈블리어 기초 참고 자료 
 	* <http://index-of.co.uk/Assembly/vangelis.pdf>
+
+	
+---
+### 2. Etc
+---
+이렇게 배울 수 있는 건 정말 감사한 일이다 
