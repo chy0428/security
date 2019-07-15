@@ -58,10 +58,10 @@
 ![blue5-2](https://user-images.githubusercontent.com/47182864/61187711-c5d3f200-a6af-11e9-99c0-f3a6944ea5a5.png)
 ![blue6](https://user-images.githubusercontent.com/47182864/61187712-c66c8880-a6af-11e9-8b61-a69f585ebed1.png)
 
-> L을 입력할 시 ->  val_4h가 0x0804c160(--> 0x0804c19c). val_4h의 값이 된다.  
-> R을 입력할 시 ->  val_4h에서 값을 가져와서 동일한 주소에 +8byte, val_4h에 다시 값을 넣는다.  
-> val_4h에 저장된 주소에 +4byte하고, 해당 값을 val 8h에 저장된 값과 XOR 한 다음 결과를 다시 val_8h에 넣는다?
-> 마지막에 val_8h랑 obj.solution이랑 일치하면 답이 될 것이다 ?
+> L을 입력할 시 ->  `var_4h`가 0x0804c160(--> 0x0804c19c). `var_4h`의 값이 된다.  
+> R을 입력할 시 ->  `var_4h`에서 값을 가져와서 동일한 주소에 +8byte, `var_4h`에 다시 값을 넣는다.  
+> `var_4h`에 저장된 주소에 +4byte하고, 해당 값을 `var_8h`에 저장된 값과 XOR 한 다음 결과를 다시 `var_8h`에 넣는다?
+> 마지막에 `var_8h`랑 obj.solution이랑 일치하면 답이 될 것이다 ?
 뭘까 . . 
 
 
