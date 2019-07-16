@@ -64,13 +64,15 @@
 
 ![r2](https://user-images.githubusercontent.com/47182864/61277689-a511b680-a7ed-11e9-9325-8eb6ecbdc346.png)
 
+> `;cat`,`|` 관계 : `|`를 통해 input stream을 표준 입력이 아닌 다른 출력으로 리다이렉트 시킬 경우, 다른 프로그램이 끝났을 때 입력 스트림이 종료되기 때문에 프로그램이 종료된다. 그렇기 때문에, `cat`을 이용해서 출력 프로그램이 종료되더라도 `cat`은 종료되지 않게 하여, Input stream이 종료되지 않게 해야한다.
+
 
 #### 3. bof4
 
 > bat ./bof4로 해당 소스 코드를 살펴본다.   
 > > main에서 인자로 argv[1]의 값을 입력받아 vuln()함수의 파라미터로 전달하여 함수 vlun이 실행되고 있다. `strcpy`로 vuln이 입력받은 파라미터를 `buf`에 복사해주고 있다. 이 때, `strcpy`함수는 `buf`의 크기를 고려하지 않고, 그대로 복사해버린다. 따라서, 해당 크기보다 큰 값을 인자로 전달하면 넘쳐 다른 메모리를 침범하게 된다. 
 
-> 위에서와 같은 방식으로 ..
+> 위에와 같은 방식으로 ..
 
 ![bof4](https://user-images.githubusercontent.com/47182864/61278281-dd65c480-a7ee-11e9-8c48-2d12bd34d639.png)
 
@@ -99,11 +101,17 @@
 
 * 버퍼오버플로우 -  사용자가 입력한 데이터의 크기가 제한된 버퍼의 용량을 초과하는 것. 
 	* 공격 대상 -  사용자로부터 어떠한 입력을 받는, 또 그 입력 값에 따라 프로그램의 실행결과가 달라지는 프로그램들이 버퍼 오버플로우의 공격대상이 됨
-
+	* Buffer Overflow 공격에 취약한 함수 : strcpy, strcat, gets, fscanf, scanf, sprintf, sscanf와 같이 문자열의 길이를 검사하지 않는 함수들
 
 * Stack 기반 overflow - stack에는 지역변수, 인자, 함수종료후 돌아갈 곳의 주소(ret값)이 저장 되어 있다. 이 RET값을 다른 주소값으로 변환하여 관리자 권한을 획득하거나 악성코드의 주소등으로 바꾸는 것 등이 있다.
 
 * Heap 기반 overflow - heap에는 malloc, calloc 등의 함수를 이용하여 프로그래머가 직접 공간을 할당하게 되는데, 이곳에 저장된 데이터 및 함수를 변경하여 원하는 결과를 얻어낼 수 있다. 
+
+* 빅 엔디언, 리틀 엔디언 
+![little](https://user-images.githubusercontent.com/47182864/61281272-5582b900-a7f4-11e9-9eaf-cfc5df62cf67.png)
+> 해당 수치를 data단위로 나눴을 때, 그 단위가 거꾸로 배열됨
+
+![little2](https://user-images.githubusercontent.com/47182864/61281273-5582b900-a7f4-11e9-8d16-cdd5fe281c1a.png)
 
 
 	
