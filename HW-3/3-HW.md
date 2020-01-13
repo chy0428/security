@@ -247,8 +247,3 @@ crackme0x02랑 3이랑 암호가 똑같길래 4에도 넣어봤는데 실패 . .
 	<https://www.hackerschool.org/HS_Boards/data/Free_Lectures/chapter_13.pdf>
 	
 ---
-### 4. Etc
----
-알아서 하라고 던져주는게 아니라 이해할 수 있도록 설명해주는게 진짜 좋다 ㅜㅜ  
-소통까지 하시는 그는 빛찬솔 . . .   
-리버싱툴 너무 깐지난다. . 이래서 컴공이 최고당 (ᵔᗜᵔ*)
