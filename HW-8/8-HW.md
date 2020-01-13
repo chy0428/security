@@ -123,7 +123,3 @@ NOP (1byte) + shell code (27byte) + 쓰레기 값 (108byte) + return address (8b
 
 
 ---
-### 2. ETC
----
-감사합니당 : ) : ) : ) : D 
-
