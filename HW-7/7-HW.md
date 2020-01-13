@@ -136,6 +136,3 @@ shell code (8byte) + 쓰레기 값 (132byte) + return address
 
 
 ---
-### 2. ETC
----
-양질의 컨텐츠 , , __빛 찬 솔__. 
