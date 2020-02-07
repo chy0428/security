@@ -1,1 +1,3 @@
-#GBC_27_security
+# security
+
+- Ghost GBC security
