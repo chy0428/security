@@ -1,3 +1,3 @@
 # security
 
-- Ghost GBC security
+Ghost GBC security
